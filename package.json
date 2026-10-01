@@ -1,1 +1,1 @@
-{"name":"wood-block-puzzle-3d","version":"1.0.0","private":true,"scripts":{"prepare-web":"mkdir -p www && cp index.html style.css game.js manifest.webmanifest www/"},"dependencies":{"@capacitor/core":"^7.4.0","@capacitor/android":"^7.4.0","@capacitor/cli":"^7.4.0"}}
+{"name":"wood-block-puzzle-3d","version":"2.0.0","private":true,"description":"Wood Block Puzzle 3D falling-block web and Android game","dependencies":{"@capacitor/core":"^7.4.0","@capacitor/android":"^7.4.0","@capacitor/cli":"^7.4.0"}}

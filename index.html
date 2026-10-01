@@ -1,1 +1,71 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101827"><title>Wood Block Puzzle 3D</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"></head><body><div class="app"><header><div><h1>WOOD BLOCK <span>3D</span></h1><small>Puzzle • Build • Clear</small></div><div class="score"><small>SKOR</small><b id="score">0</b></div></header><main><section class="card"><div class="status"><span>● Level <b>1</b></span><span>Best <b id="best">0</b></span></div><div id="board" class="board"></div></section><section class="card tray-card"><label>BALOK</label><div id="tray" class="tray"></div></section><div class="actions"><button id="undo">↶ Undo</button><button id="new" class="primary">＋ Game Baru</button><button id="sound">🔊 Suara</button></div><p>Seret balok ke papan. Penuhi baris atau kolom untuk membersihkannya.</p></main></div><div id="modal" class="modal hidden"><div class="modalbox"><div>🏆</div><h2>Game Over</h2><p>Skor kamu</p><strong id="final">0</strong><button id="again" class="primary">Main Lagi</button></div></div><script src="game.js"></script></body></html>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070b16">
+<meta name="description" content="Wood Block Puzzle 3D - falling block puzzle game">
+<title>Wood Block Puzzle 3D</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb orb1"></div><div class="bg-orb orb2"></div>
+<div class="app">
+  <header class="topbar glass">
+    <div class="brand-wrap">
+      <div class="brand">WOOD BLOCK <span>3D</span></div>
+      <div class="tagline">FALL • ROTATE • CLEAR</div>
+    </div>
+    <div class="score-panel">
+      <div><small>SCORE</small><strong id="score">0</strong></div>
+      <div><small>BEST</small><strong id="best">0</strong></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="game-shell glass">
+      <div class="hud">
+        <div><span class="live-dot"></span> <span id="status">READY</span></div>
+        <div>LEVEL <b id="level">1</b></div>
+      </div>
+      <div class="board-wrap">
+        <div id="board" class="board" aria-label="Papan 10 x 20"></div>
+        <div id="lineFlash" class="line-flash"></div>
+      </div>
+    </section>
+
+    <section class="info-row">
+      <div class="glass info-card"><small>NEXT</small><div id="next" class="next-piece"></div></div>
+      <div class="glass info-card"><small>LINES</small><strong id="lines">0</strong></div>
+      <div class="glass info-card"><small>COMBO</small><strong id="combo">0</strong></div>
+    </section>
+
+    <section class="controls glass">
+      <button class="ctrl" data-action="left" aria-label="Geser kiri">◀</button>
+      <button class="ctrl" data-action="rotate" aria-label="Putar">↻</button>
+      <button class="ctrl primary-ctrl" data-action="drop" aria-label="Jatuhkan">▼</button>
+      <button class="ctrl" data-action="right" aria-label="Geser kanan">▶</button>
+    </section>
+    <div class="small-controls">
+      <button id="pauseBtn">Ⅱ Pause</button>
+      <button id="soundBtn">🔊 Suara</button>
+      <button id="newBtn">＋ Baru</button>
+    </div>
+    <p class="help">← → geser • ↑ putar • ↓ jatuhkan • Space jatuhkan cepat</p>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-box glass">
+    <div class="trophy">✦</div>
+    <div class="eyebrow">RUN COMPLETE</div>
+    <h2>GAME OVER</h2>
+    <div class="final-score" id="finalScore">0</div>
+    <p><span id="finalLines">0</span> lines cleared</p>
+    <button id="restartBtn" class="restart">MAIN LAGI</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
